@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Navigation */
+        nav {
+            display: flex;
+            align-items: center !important;
+            padding : 10px 25px;
+            justify-content: space-between;
+            
+        }
+        nav > ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        li {
+            list-style: none;
+            color: black;
+            font-weight: 650;
+            font-size: 23px;
+        }
+        nav button{
+            background-color: rgb(255,204,0);
+            border-radius: 15px;
+            padding: 10px 15px;
+            border: none;
+            transition: 256ms;
+            font-weight: 600;
+        }
+        a{
+            color: black !important;
+            text-decoration: none !important;
+        } 
+        nav button:hover{
+            transform: scale(1.1);
+        }
+        footer{
+            background-color: rgba(184, 203, 184,0.2);
+            width: 100%;
+            margin-top: -25px;
+        }
+        body{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        #home, #alumni_table{
+            height: 90vh;
+            display: grid;
+            place-items: center;
+            
+        }
+        #home {
+            background: linear-gradient(to right, rgba(255,255,255,.1) , rgba(255,255,255,.3)), url(https://img.collegepravesh.com/2022/05/RCOEM-Nagpur.jpg);
+            background-position: center;
+            /* width: 100%;
+            height: 100%; */
+        }
+        #home div{
+            backdrop-filter: blur(1px) saturate(129%);
+            -webkit-backdrop-filter: blur(9px) saturate(169%);
+            background-color: rgba(255, 255, 255, 0.27);
+            border-radius: 12px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+            padding: 50px 100px;
+        }
+        #alumni_table{
+            /* background: linear-gradient(to right, rgba(255,255,255,.3) , rgba(255,255,255,.6)), url(https://s3-ap-south-1.amazonaws.com/ricedigitals3bucket/AUPortalContent/2021/05/31112658/Untitled-design-34.png);
+            object-fit: cover;
+            background-position: center;
+            background-repeat: no-repeat; */
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        table {
+            border-radius: 49px;
+        background: #f5f5f5;
+        box-shadow: inset 50px 50px 100px #dadada,
+            inset -50px -50px 100px #ffffff;      
+            margin-bottom: 50px;    
+        }
+        #alumni_button{
+            border-radius: 15px;
+            padding : 15px 25px; background-color: rgb(255,204,0);
+        }
+
+        h2{
+            font-size: 25px;
+        }
+        
+        h1 {
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Name, Branch, Passing Year, Current Organization and Designation -->
+    <nav>
+        <div class="nav_logo">
+            <img src="data/logo.jpeg" width="175" alt="" class="src">
+        </div>
+        <ul>
+            <li>
+                <a href="index.html#home">
+                    Home
+                </a>
+            </li>
+            <li><a href="index.html#alumni_table">
+                    Our Alumnis
+                </a></li>
+            <li>
+                <button class="">
+                    <a href="form.html"
+                       rel="noopener noreferrer">
+                        Register
+                    </a>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main >
+        <section id="home">
+            <div align="center">
+                <h2>
+                    Welcome To,
+                </h2>
+                <h1>
+                    Shri Ramdeobaba College Of Engineering
+                </h1>
+                <button id="alumni_button" >
+                    <a href="index.html#alumni_table">
+                        View All Our Alumnis 🔗
+                    </a>
+                </button>
+            </div>
+        </section>
+        <section id="alumni_table">
+            <h1>Our Alumni</h1>
+            <table  cellspacing="25px"  id="alumni_main_table">
+                <tr id="head_row">
+                    <th >Sr No.</th>
+                    <th >Name</th>
+                    <th >Branch</th>
+                    <th >Year</th>
+                    <th  >Proffesion</th>
+                    <th  >Compamy</th>
+                    <th >Country</th>
+                    <!-- <th width="5%" >Sr No.</th>
+                    <th width="10%">Name</th>
+                    <th width="5%" >Branch</th>
+                    <th width="5%" >Year</th>
+                    <th width="30%" >Proffesion</th>
+                    <th width="20%" >Compamy</th>
+                    <th width="25%">Country</th> -->
+                
+                
+                </tr>
+                <tr>
+                    <th >1</th>
+                    <th >Mr. Kamesh Rao</th>
+                    <th >IT</th>
+                    <th >2005</th>
+                    <th >Senior Software Engineer</th>
+                    <th >Amazon</th>
+                    <th >-</th>
+                </tr>
+                <tr>
+                    <th >2</th>
+                    <th >Mr. Rohit Karnani</th>
+                    <th >IT</th>
+                    <TH >2007</TH>
+                    <th >Director</th>
+                    <TH >Acuro Organics Ltd</TH>
+                    <th >New Delhi</th>
+                </tr>
+                <tr>
+                    <th >3</th>
+                    <th >Mr. Manish Vyas</th>
+                    <th >Electronics</th>
+                    <th >1993</th>
+                    <th >President, Communications Business</th>
+                    <TH >Tech Mahindra</TH>
+                    <th >USA</th>
+                </tr>
+                <tr>
+                    <th >4</th>
+                    <th >Mr. Anurag Tuli</th>
+                    <TH >EDT</TH>
+                    <th >1993</th>
+                    <th >Configuration Manage</th>
+                    <TH >Nokia Siemens Networks</TH>
+                    <th >-</th>
+                </tr>
+                <tr>
+                    <th >5</th>
+                    <th >Manish Verma</th>
+                    <th >Civil</th>
+                    <TH >1990</TH>
+                    <th >Director - Service Engineering</th>
+                    <TH >Yahoo R & D</TH>
+                    <th >Bangalore</th>
+                </tr>
+                <tr>
+                    <th >6</th>
+                    <th >Mr. Ameya Gurjar</th>
+                    <th >CSE</th>
+                    <TH >-</TH>
+                    <th >Software Developer </th>
+                    <TH >Amazon</TH>
+                    <th >Greater Minneapolis-St. Paul Area</th>
+                </tr>
+                <tr>
+                    <th >7</th>
+                    <th >Chaitanya Bagaria</th>
+                    <th >CS </th>
+                    <TH >2007</TH>
+                    <th >Software Engineer</th>
+                    <TH >Game Closure</TH>
+                    <th >San Francisco</th>
+                </tr>
+                <tr>
+                    <th >8</th>
+                    <th >Mr. Abhinav Mishra</th>
+                    <th >MCA</th>
+                    <TH >2009</TH>
+                    <th >Senior Software Engineer - QA</th>
+                    <TH >Informatica</TH>
+                    <th >Bangalore</th>
+                </tr>
+                <tr>
+                    <th >9</th>
+                    <th >MR. Vivek Shirbhate</th>
+                    <th >Electronics </th>
+                    <TH >1996</TH>
+                    <th >Country Head</th>
+                    <TH >TCS</TH>
+                    <th >Saudi Arabia</th>
+                </tr>
+                <tr>
+                    <th >10</th>
+                    <th >Mr. Neeraj Sarda</th>
+                    <th >Industrial</th>
+                    <TH >2001</TH>
+                    <th >Director</th>
+                    <TH >Sarda Metals & Alloys Ltd.</TH>
+                    <th >Visakhapatnam, Andhra
+                        Pradesh</th>
+                </tr>
+                <tr>
+                    <th >11</th>
+                    <th >Mr. Atul Agrawal</th>
+                    <th >MCA</th>
+                    <TH >2011</TH>
+                    <th >Microstrategy SDK Consultant | Big data Enthusiast</th>
+                    <TH >Third I</TH>
+                    <th >Pune</th>
+                </tr>
+                <tr>
+                    <th >12</th>
+                    <th >Ms. Kalpa Vishnani</th>
+                    <th >IT</th>
+                    <TH >2009</TH>
+                    <th >Senior Software Developer</th>
+                    <TH >CISCO</TH>
+                    <th >Bangalore</th>
+                </tr>
+                <tr>
+                    <th >13</th>
+                    <th >Mr. Sandeep Arora</th>
+                    <th >Electrical (E&P)</th>
+                    <TH >1989</TH>
+                    <th >VP -Global Sourcing, Supply Chain & Strategy</th>
+                    <TH >SPX Transformer Inc</TH>
+                    <th >USA</th>
+                </tr>
+                <tr>
+                    <th >14</th>
+                    <th >Jitendra Kumar Singh</th>
+                    <th >B.E (Mining)</th>
+                    <TH >1994</TH>
+                    <th >Senior Blasting Engineer</th>
+                    <TH >Aswan Stone Products</TH>
+                    <th >Doha</th>
+                </tr>
+                <tr>
+                    <th >15</th>
+                    <th >Mr. Abhijit Pathak</th>
+                    <th >Electronics</th>
+                    <TH >1998</TH>
+                    <th >Principal Engineer</th>
+                    <TH > Samsung R&D Institute</TH>
+                    <th >Bangalore</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer >
+        <section style="padding:15px;" >
+            <center>
+                <h2 style="border-bottom: 2px solid gray;display: inline;">
+                    Socials
+                </h2>
+            </center>
+            <ul style="list-style:none; display:flex; justify-content: space-around;" >
+                <li style="display:flex;align-items:center;gap:2px;">
+                    <img src="https://img.icons8.com/fluency/512/twitter.png" width="15px" alt="">
+                    <a target="_blank" href="https://twitter.com/bobde_yagyesh">Twitter</a>
+                </li>
+                <li style="display:flex;align-items:center;gap:2px;" >
+                    <img src="https://img.icons8.com/color/512/linkedin.png" width="15px" alt="">
+                    <a target="_blank" href="https://in.linkedin.com/in/bobde-yagyesh">Linkedin</a>
+                </li>
+                <li style="display:flex;align-items:center;gap:2px;" >
+                    <img src="https://img.icons8.com/color/512/instagram-new.png" width="15px" alt="">
+                    <a target="_blank" href="https://instagram.com/bobde_yagyesh">Instagram</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

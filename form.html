@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Registeration</title>
+    <style>
+        label {
+            display: block;
+        }
+        .field_label{
+            position: absolute;
+            margin-top: -14px;
+            background: white;
+        }
+        nav {
+            display: flex;
+            align-items: center !important;
+            padding : 10px 25px;
+            justify-content: space-between;
+            width: 95%;
+        }
+        nav > ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        li {
+            list-style: none;
+            color: black;
+            font-weight: 650;
+            font-size: 23px;
+        }
+        nav button{
+            background-color: rgb(255,204,0);
+            border-radius: 15px;
+            padding: 10px 15px;
+            border: none;
+            transition: 256ms;
+            font-weight: 600;
+        }
+        a{
+            color: black !important;
+            text-decoration: none !important;
+        } 
+        nav button:hover{
+            transform: scale(1.1);
+        }
+        body {
+            background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
+background-blend-mode: overlay, overlay, normal;
+            display: grid;
+            width: 100%;
+            place-items: center;
+            overflow: hidden;
+        }
+        form {
+            min-width: 700px;
+            padding : 25px 75px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+    backdrop-filter: blur(0px) saturate(129%);
+    -webkit-backdrop-filter: blur(0px) saturate(129%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    transition: 500ms;
+        }
+        input[type=text] , select,option , input[type=number]{
+            width: 50%;
+            padding : 10px;
+            border-radius: 15px;
+            margin-top: 5px;
+        }
+        input{
+            padding: 12px 15px;
+        }
+        label{
+            margin-top: 5px;
+        }
+        input[type=button] {
+            padding : 15px 0;
+        }
+        button[type=submit]{
+            padding : 10px 0;
+            border-radius: 10px;
+            border: none;
+            background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+            transition: 456ms;
+        }
+        button[type=submit]:hover {
+            transform: scale(1.1);
+        }
+        option:active{
+            margin: 5px;
+        }
+        footer{
+            background-color: rgba(184, 203, 184,0.2);
+            width: 100%;
+            margin-top: -25px;
+        }
+        form:hover{
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <img src="data/logo.jpeg"
+                 width="175"
+                 alt=""
+                 class="src">
+        </div>
+        <ul>
+            <li>
+                <a href="index.html#home">
+                    Home
+                </a>
+            </li>
+            <li><a href="index.html#alumni_table">
+                    Our Alumnis
+                </a></li>
+            <li>
+                <button class="">
+                    <a href="form.html"
+                       rel="noopener noreferrer">
+                        Register
+                    </a>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+         <!-- Name, Branch, Passing Year, Current Organization and Designation -->
+        <form  >
+            <h2 align="center" >Alumni Registration</h2>
+            <fieldset>
+                <label class="field_label" >Alumni Name</label>
+                <label for="name">First Name</label>
+                <input type="text" placeholder="Enter First Name..." />
+                <label for="name">Last Name</label>
+                <input type="text" placeholder="Enter Last Name..." />
+            </fieldset>
+            <fieldset>
+                <label class="field_label" >Academic Information</label>
+                <label for="branch" >Select Your Branch: </label>
+                <select id="branch" name="branch">
+                    <option name=""
+                            value=""
+                            selected
+                            disabled
+                            hidden>--Branch--</option>
+                    <option name=""
+                            value="">Computer Science</option>
+                    <option name=""
+                            value="">Electrical Engg.</option>
+                    <option name=""
+                            value="">Mechanical Engg.</option>
+                    <option name=""
+                            value="">Civil Engg.</option>
+                    <option name=""
+                            value="">Electrical Engg.</option>
+                </select>
+                
+                <label>Final Marks <span>(CGPA)</span></label>
+                <input type="number" id="fianl_marks" />
+            </fieldset>
+            <fieldset>
+                <label class="field_label" >Current Information</label>
+                <label>Current Status</label>
+                <label for="status1">
+                    <input type="radio"
+                    name="status" id="status1" />
+                    Student
+                </label>
+                <label for="status2">
+                    <input type="radio"
+                    name="status" id="status2" />
+                    Employed
+                </label>
+                <label for="status2">
+                    <input type="radio"
+                    name="status" id="status2" />
+                    Employer
+                </label>
+                <label>Institute/Company Name</label>
+                <input type="text" id="institution" placeholder="Enter your Company/Institute Name..." />
+            </fieldset>
+            <fieldset>
+                <label class="field_label">Final Message</label>
+                <textarea cols="100" rows="5" placeholder="Write a message for your juniors🤗" ></textarea>
+            </fieldset>
+            <button type="submit" class="">
+                Submit
+            </button>
+        </form>
+    </main>
+    <footer >
+        <section style="padding:15px; " >
+            
+            <ul style="list-style:none; display:flex; justify-content: space-around;" >
+                <li style="display:flex;align-items:center;gap:2px;">
+                    <img src="https://img.icons8.com/fluency/512/twitter.png" width="25px" alt="">
+                    <a target="_blank" href="https://twitter.com/bobde_yagyesh">Twitter</a>
+                </li>
+                <li style="display:flex;align-items:center;gap:2px;" >
+                    <img src="https://img.icons8.com/color/512/linkedin.png" width="25px" alt="">
+                    <a target="_blank" href="https://in.linkedin.com/in/bobde-yagyesh">Linkedin</a>
+                </li>
+                <li style="display:flex;align-items:center;gap:2px;" >
+                    <img src="https://img.icons8.com/color/512/instagram-new.png" width="25px" alt="">
+                    <a target="_blank" href="https://instagram.com/bobde_yagyesh">Instagram</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
